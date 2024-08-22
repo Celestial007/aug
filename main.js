@@ -21,6 +21,7 @@ for(let i=0;i<3;i++){
 }
 seekBar()
 details();
+customNav()
 playBtn.onclick = function(){
     if(!isPlaying){
         aug.play();
@@ -68,6 +69,7 @@ aug.onpause = function(){
 function details(){
     songTitle.innerHTML = titles[index];
     aug.src = songs[index];
+    customNav()
     body.style.backgroundImage = `url(${covers[index]})`
     console.log(covers[index])
 }
