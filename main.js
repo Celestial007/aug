@@ -72,7 +72,7 @@ function details(){
     customNav()
     body.style.backgroundImage = `url(${covers[index]})`
     console.log(covers[index])
-    isPlaying = true;
+    isPlaying = false;
 }
 
 function TimerDuration(){
