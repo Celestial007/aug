@@ -44,9 +44,7 @@ body{
                 justify-content: space-between;
                 flex-direction: row;
                 width: 80%;
-                p{
                   font-size: 20px;
-                }
             }
             .btns{
                 display: flex;
