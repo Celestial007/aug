@@ -1,13 +1,15 @@
 @media screen and (max-width: 700px){
-    body{
-        height: 100dvh;
-        -webkit-touch-callout:none;
+    ::selection{
+                -webkit-touch-callout:none;
 -webkit-user-select:none;
 -khtml-user-select:none;
 -moz-user-select:none;
 -ms-user-select:none;
 user-select:none;
 -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    body{
+        height: 100dvh;
     }
     .container{
         height: 100%;
