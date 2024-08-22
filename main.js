@@ -146,26 +146,26 @@ function customNav(){
 navigator.mediaSession.metadata = new MediaMetadata({
   title: titles[index],
   artwork: [
-    { src: covers[index], sizes: '640x640', type: 'image/jpg' }
+    { src: covers[index], sizes: '640x640', type: 'image/jpeg' }
   ]
 });
 navigator.mediaSession.
             setActionHandler('nexttrack', function () {
-                index++;
-  if (index > 2) {
-    index = 0;
-  }
-                details();
-                aug.play();
+ index++;
+    if (index > 2) {
+      index = 0;
+    }
+    details();
+    aug.play();
             });
 navigator.mediaSession.
             setActionHandler("previoustrack", () => {
-                index--;
-  if (index < 1) {
-    index = 2;
-  }
-  details();
-                aug.play();
+    index--;
+    if (index < 0) {
+      index = 2;
+    }
+    details();
+    aug.play();
             });
             navigator.mediaSession.
             setActionHandler("seekforward", () => {
