@@ -140,3 +140,40 @@ function seekBar(){
       seeking = true;
     });
     }
+function customNav(){
+navigator.mediaSession.metadata = new MediaMetadata({
+  title: titles[index],
+  artwork: [
+    { src: covers[index], sizes: '640x640', type: 'image/jpg' }
+  ]
+});
+navigator.mediaSession.
+            setActionHandler('nexttrack', function () {
+                index++;
+  if (index > 2) {
+    index = 0;
+  }
+                details();
+                aug.play();
+            });
+navigator.mediaSession.
+            setActionHandler("previoustrack", () => {
+                index--;
+  if (index < 1) {
+    index = 2;
+  }
+  details();
+                aug.play();
+            });
+            navigator.mediaSession.
+            setActionHandler("seekforward", () => {
+                aug.currentTime+=10;
+            });
+
+            navigator.mediaSession.
+            setActionHandler("seekbackward", () => {
+                aug.currentTime-=10;
+            });
+          
+navigator.mediaSession.playbackState = 'none';
+}
