@@ -1,0 +1,24 @@
+@media screen and (max-width: 700px){
+    body{
+        height: 100dvh;
+        width: 100dvw;
+    }
+    .container{
+        .layer{
+            .controls{
+                P{
+                    font-size: 24px;
+                }
+                .timer{
+                    
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                .btns{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

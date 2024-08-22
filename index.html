@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/f54ce41a64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <audio id="aug"></audio>
+        <div class="layer">
+            <div class="controls">
+                <p id="Songtitle"></p>
+                <input id="seekBar" type="range" value="0">
+                <div class="timer">
+                    <p id="startTime">0:0</p>
+                    <p id="endTime">0:0</p>
+                </div>
+                <div class="btns">
+                    <button id="preBtn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="playBtn"><i class="fa-solid fa-play"></i></button>
+                    <button id="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
