@@ -22,15 +22,15 @@ for(let i=0;i<3;i++){
 seekBar()
 details();
 customNav()
-playBtn.onclick = function(){
-    if(!isPlaying){
-         aug.pause();
-        isPlaying = true;
-    }else{
-         aug.play();
-        isPlaying = false;
-    }
-}
+playBtn.onclick = function () {
+  if (isPlaying) {
+    aug.play();
+    isPlaying = false;
+  } else {
+    aug.pause();
+    isPlaying = true;
+  }
+};
 
 aug.onended = function () {
     index++;
