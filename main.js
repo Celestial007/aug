@@ -23,7 +23,7 @@ seekBar()
 details();
 customNav()
 playBtn.onclick = function () {
-  if (isPlaying) {
+  if (!isPlaying) {
     aug.play();
     isPlaying = false;
   } else {
