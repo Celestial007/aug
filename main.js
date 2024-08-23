@@ -24,11 +24,11 @@ details();
 customNav()
 playBtn.onclick = function () {
   if (isPlaying) {
-    aug.play();
-    isPlaying = false;
-  } else {
-    aug.pause();
+        aug.pause();
     isPlaying = true;
+  } else {
+      aug.play();
+    isPlaying = false;
   }
 };
 
