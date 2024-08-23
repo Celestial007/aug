@@ -22,12 +22,12 @@ seekBar()
 details();
 customNav()
 let isPlaying = true;
-playBtn.onclick = function () {
+playbtn.onclick = function () {
   if (isPlaying) {
-      aug.pause();
+    aug.play();
     isPlaying = false;
   } else {
-     aug.play();
+    aug.pause();
     isPlaying = true;
   }
 };
@@ -72,7 +72,7 @@ function details(){
     customNav()
     body.style.backgroundImage = `url(${covers[index]})`
     console.log(covers[index])
-    isPlaying = false;
+    isPlaying = true;
 }
 
 function TimerDuration(){
