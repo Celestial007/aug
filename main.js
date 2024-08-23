@@ -22,7 +22,7 @@ for(let i=0;i<3;i++){
 seekBar()
 details();
 customNav()
-playbtn.onclick = function () {
+playBtn.onclick = function () {
   if (isPlaying) {
     aug.play();
     isPlaying = false;
