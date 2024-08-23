@@ -67,7 +67,7 @@ aug.onpause = function(){
 }
 
 function details(){
-    isPlaying = false;
+    isPlaying = true;
     aug.play();
     songTitle.innerHTML = titles[index];
     aug.src = songs[index];
