@@ -71,7 +71,6 @@ function details(){
     aug.src = songs[index];
     customNav()
     body.style.backgroundImage = `url(${covers[index]})`
-    console.log(covers[index])
     isPlaying = false;
 }
 
