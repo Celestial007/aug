@@ -6,7 +6,7 @@ let playBtn = document.getElementById("playBtn");
 let preBtn = document.getElementById("preBtn");
 let nextBtn = document.getElementById("nextBtn");
 let player_bar = document.getElementById("seekBar");
-let isPlaying = false;
+let isPlaying = true;
 let seeking = true;
 let body = document.body;
 let titles = ["mor mor mayur","यादनेश की शादीशुदा मस्ती","गीत: गॉट्या आणि किरण"]
@@ -19,16 +19,18 @@ for(let i=0;i<3;i++){
     songs.push(`${store1}${i+1}.mp3`);
     covers.push(`${store2}${i+1}.jpeg`);
 }
-seekBar()
-details();
-customNav()
+seekBar();
+customNav();
+songTitle.innerHTML = titles[index];
+aug.src = songs[index];
+body.style.backgroundImage = `url(${covers[index]})`
 playBtn.onclick = function () {
   if (isPlaying) {
-        aug.pause();
-    isPlaying = true;
-  } else {
-      aug.play();
+    aug.play();
     isPlaying = false;
+  } else {
+    aug.pause();
+    isPlaying = true;
   }
 };
 
@@ -67,12 +69,12 @@ aug.onpause = function(){
 }
 
 function details(){
-    isPlaying = true;
-    aug.play();
     songTitle.innerHTML = titles[index];
     aug.src = songs[index];
     customNav()
     body.style.backgroundImage = `url(${covers[index]})`
+    aug.play();
+    isPlaying = false;
 }
 
 function TimerDuration(){
