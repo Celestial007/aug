@@ -6,6 +6,7 @@ let playBtn = document.getElementById("playBtn");
 let preBtn = document.getElementById("preBtn");
 let nextBtn = document.getElementById("nextBtn");
 let player_bar = document.getElementById("seekBar");
+let isPlaying = true;
 let seeking = true;
 let body = document.body;
 let titles = ["mor mor mayur","यादनेश की शादीशुदा मस्ती","गीत: गॉट्या आणि किरण"]
@@ -14,7 +15,6 @@ let store1 = "https://nogui.freewebhostmost.com/col/mp3/";
 let store2 = "https://nogui.freewebhostmost.com/col/jpeg/";
 let songs = [];
 let covers = [];
-let isPlaying = true;
 for(let i=0;i<3;i++){
     songs.push(`${store1}${i+1}.mp3`);
     covers.push(`${store2}${i+1}.jpeg`);
