@@ -8,7 +8,6 @@ let nextBtn = document.getElementById("nextBtn");
 let player_bar = document.getElementById("seekBar");
 let seeking = true;
 let body = document.body;
-let isPlaying = true;
 let titles = ["mor mor mayur","यादनेश की शादीशुदा मस्ती","गीत: गॉट्या आणि किरण"]
 let index = 0;
 let store1 = "https://nogui.freewebhostmost.com/col/mp3/";
@@ -22,8 +21,9 @@ for(let i=0;i<3;i++){
 seekBar()
 details();
 customNav()
+let isPlaying = true;
 playBtn.onclick = function () {
-  if (!isPlaying) {
+  if (isPlaying) {
     aug.play();
     isPlaying = false;
   } else {
