@@ -47,7 +47,8 @@ aug.onended = function () {
       index = 2;
     }
     details();
-    aug.play();
+    isPlaying = false;
+      aug.play();
   };
 
   nextBtn.onclick = function () {
@@ -56,7 +57,8 @@ aug.onended = function () {
       index = 0;
     }
     details();
-    aug.play();
+    isPlaying = false;
+      aug.play();
   };
 
 aug.onplay = function(){
@@ -71,7 +73,6 @@ function details(){
     aug.src = songs[index];
     customNav()
     body.style.backgroundImage = `url(${covers[index]})`
-    isPlaying = false;
 }
 
 function TimerDuration(){
