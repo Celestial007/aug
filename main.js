@@ -14,6 +14,7 @@ let store1 = "https://nogui.freewebhostmost.com/col/mp3/";
 let store2 = "https://nogui.freewebhostmost.com/col/jpeg/";
 let songs = [];
 let covers = [];
+let isPlaying = true;
 for(let i=0;i<3;i++){
     songs.push(`${store1}${i+1}.mp3`);
     covers.push(`${store2}${i+1}.jpeg`);
@@ -21,7 +22,6 @@ for(let i=0;i<3;i++){
 seekBar()
 details();
 customNav()
-let isPlaying = true;
 playbtn.onclick = function () {
   if (isPlaying) {
     aug.play();
