@@ -47,7 +47,6 @@ aug.onended = function () {
       index = 2;
     }
     details();
-    isPlaying = false;
       aug.play();
   };
 
@@ -57,15 +56,16 @@ aug.onended = function () {
       index = 0;
     }
     details();
-    isPlaying = false;
       aug.play();
   };
 
 aug.onplay = function(){
     playBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`
+    isPlaying = false;
 }
 aug.onpause = function(){
     playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`
+    isPlaying = true;
 }
 
 function details(){
