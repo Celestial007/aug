@@ -61,14 +61,14 @@ aug.onended = function () {
 
 aug.onplay = function(){
     playBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`
-    isPlaying = false;
 }
 aug.onpause = function(){
     playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`
-    isPlaying = true;
 }
 
 function details(){
+    isPlaying = false;
+    aug.play();
     songTitle.innerHTML = titles[index];
     aug.src = songs[index];
     customNav()
