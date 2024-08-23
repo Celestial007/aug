@@ -6,7 +6,7 @@ let playBtn = document.getElementById("playBtn");
 let preBtn = document.getElementById("preBtn");
 let nextBtn = document.getElementById("nextBtn");
 let player_bar = document.getElementById("seekBar");
-let isPlaying = false;
+let isPlaying = true;
 let seeking = true;
 let body = document.body;
 let titles = ["mor mor mayur","यादनेश की शादीशुदा मस्ती","गीत: गॉट्या आणि किरण"]
@@ -23,7 +23,7 @@ seekBar()
 details();
 customNav()
 playBtn.onclick = function () {
-  if (!isPlaying) {
+  if (isPlaying) {
     aug.play();
     isPlaying = false;
   } else {
